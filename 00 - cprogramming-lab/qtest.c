@@ -1,18 +1,18 @@
 /* Implementation of testing code for queue code */
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+#include <getopt.h>
+#include <signal.h>
 
 #define _XOPEN_SOURCE 700
 /* Our program needs to use regular malloc/free */
 #define INTERNAL 1
 
-#include "console.h"
 #include "harness.h"
 #include "queue.h"
 #include "report.h"
-
-#include <getopt.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include "console.h"
 
 /* A few functions in this file intentionally don't use their
    arguments.  */

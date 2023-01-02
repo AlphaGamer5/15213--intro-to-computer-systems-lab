@@ -10,6 +10,9 @@
  * @author XXX <XXX@andrew.cmu.edu>
  */
 
+#ifndef QUEUE_H
+#define QUEUE_H
+
 #include <stdbool.h>
 #include <stddef.h>
 
@@ -44,6 +47,18 @@ typedef struct {
      *        queue is empty.
      */
     list_ele_t *head;
+    
+    /**
+     * @brief Pointer to the last element in the queue, or NULL if the
+     *        queue is empty.
+     */
+    list_ele_t *tail;
+
+    /**
+     * @brief Current size of the queue.
+    */
+    int size;
+
     /*
      * TODO: You will need to add more fields to this structure
      *       to efficiently implement q_size and q_insert_tail
@@ -72,3 +87,5 @@ size_t queue_size(queue_t *q);
 
 /* Reverse elements in queue */
 void queue_reverse(queue_t *q);
+
+#endif
